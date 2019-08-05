@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/background_image"
+	android:orientation="vertical"
+	android:gravity="center">
+	<ImageView
+		android:layout_height="130dp"
+		android:layout_width="wrap_content"
+		android:src="@drawable/pokeLogo"
+		android:id="@+id/imageView1" 
+	/>
+	<ImageView
+		android:layout_height="60dp"
+		android:layout_width="380dp"
+		android:src="@drawable/pokeLogoFight"
+	/>
+	<EditText
+		android:layout_height="50dp"
+		android:layout_width="300dp"
+		android:id="@+id/user_name"
+		android:hint="User Name"
+		android:background="@drawable/labelForm"
+		android:paddingLeft="15dp"
+		android:layout_marginTop="12dp"
+	/>
+	<EditText
+		android:layout_height="50dp"
+		android:layout_width="300dp"
+		android:id="@+id/password"
+		android:hint="Password"
+		android:background="@drawable/labelForm"
+		android:layout_marginTop="12dp"
+		android:paddingLeft="15dp"
+	/>
+	<Button
+		android:layout_height="50dp"
+		android:layout_width="300dp"
+		android:id="@+id/btnLog"
+		android:text="Login"
+		android:textSize="20dp"
+		android:textAllCaps="false"
+		android:textColor="#024af2"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/btnLogin"
+	/>
+	<TextView
+		android:layout_height="40dp"
+		android:layout_width="380dp"
+		android:id="@+id/forgotLbl"
+		android:text="Forgot password"
+		android:textSize="20dp"
+		android:gravity="center"
+		android:textColor="#02277d"
+	/>
+	<TextView
+		android:layout_width="300dp"
+		android:layout_height="50dp"
+		android:id="@+id/memberCheck"
+		android:textSize="30dp"
+		android:textAlignment="center"
+		android:text=""
+		android:textColor="#faee02"
+		android:textStyle="bold"
+		android:textAllCaps="true"
+	/>
+	<Button
+		android:layout_height="40dp"
+		android:layout_width="130dp"
+		android:id="@+id/btnSign"
+		android:text="Sign up"
+		android:textColor="@android:color/white"
+		android:textAllCaps="false"
+		android:textSize="20dp"
+		android:background="@drawable/btnSign"
+		android:layout_marginTop="10dp"
+	/>
+		
+</LinearLayout>

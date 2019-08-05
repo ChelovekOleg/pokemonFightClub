@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/registrBackg"
+	android:orientation="vertical"
+	android:gravity="center">
+	
+	<ImageView
+		android:layout_height="60dp"
+		android:layout_width="380dp"
+		android:src="@drawable/registrLogo"
+		android:id="@+id/imageView1" 
+	/>
+
+	<EditText
+		android:layout_height="60dp"
+		android:layout_width="300dp"
+		android:id="@+id/full_name"
+		android:hint="Full Name"
+		android:background="@drawable/labelForm"
+		android:layout_marginTop="12dp"
+		android:paddingLeft="15dp"
+	/>
+	<EditText
+		android:layout_height="60dp"
+		android:layout_width="300dp"
+		android:id="@+id/email_id"
+		android:hint="Email"
+		android:background="@drawable/labelForm"
+		android:layout_marginTop="12dp"
+		android:paddingLeft="15dp"
+	/>
+	<EditText
+		android:layout_height="60dp"
+		android:layout_width="300dp"
+		android:id="@+id/user"
+		android:hint="Username"
+		android:background="@drawable/labelForm"
+		android:paddingLeft="15dp"
+		android:layout_marginTop="12dp"
+	/>
+	<EditText
+		android:layout_height="60dp"
+		android:layout_width="300dp"
+		android:id="@+id/new_password"
+		android:hint="Password"
+		android:background="@drawable/labelForm"
+		android:paddingLeft="15dp"
+		android:layout_marginTop="12dp"
+	/>
+	
+	<Button
+		android:layout_height="60dp"
+		android:layout_width="300dp"
+		android:id="@+id/btnSignin"
+		android:text="Sign In"
+		android:textSize="20dp"
+		android:textAllCaps="false"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/btnLogin"
+		/>
+
+	<TextView
+		android:layout_height="40dp"
+		android:layout_width="380dp"
+		android:id="@+id/goBack"
+		android:text="Back To Main"
+		android:textSize="20dp"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+	/>
+
+
+</LinearLayout>
