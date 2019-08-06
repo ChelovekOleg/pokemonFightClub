@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="DBHelper.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyCustomAdapter.cs" />
     <Compile Include="PokeballPage.cs" />
+    <Compile Include="Pokemon.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,6 +187,12 @@
     <AndroidResource Include="Resources\layout\listViewPokeBall.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pokemons\pikachu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pikachu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

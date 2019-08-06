@@ -43,7 +43,7 @@ namespace PokemonFightClub
         public override void OnCreate(SQLiteDatabase db)
         {
             db.ExecSQL(createUserTableQuery);
-            db.ExecSQL("CREATE TABLE pokemons (id INTEGER, name TEXT, description TEXT, type TEXT, generation INTEGER, userIdOwe INTEGER, ability1 TEXT, ability2 TEXT, ability3 TEXT, ability4 TEXT, ability1Attack INTEGER, ability2Attack INTEGER, ability3Attack INTEGER, ability4Attack INTEGER)");
+            db.ExecSQL("CREATE TABLE pokemons (id INTEGER, name TEXT, description TEXT, type TEXT, generation INTEGER, userIdOwe INTEGER, ability1 TEXT, ability2 TEXT, ability3 TEXT, ability4 TEXT, ability1Attack INTEGER, ability2Attack INTEGER, ability3Attack INTEGER, ability4Attack INTEGER, hp INTEGER, image INTEGER)");
         }
 
         public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -73,5 +73,10 @@ namespace PokemonFightClub
                 return false;
             }
         }
+
+        /*public Pokemon[] getLiblary(int generationLib) {
+            Pokemon[] listPokemons;
+            return listPokemons;
+        }*/
     }
 }

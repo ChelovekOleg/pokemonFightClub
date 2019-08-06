@@ -6,13 +6,13 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@drawable/versBackg"
-	android:orientation="vertical"
+	android:orientation="vertical">
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="wrap_content"
-		android:layout_height="80.0dp">
+		android:layout_height="80dp">
 		<ImageView
-			android:layout_width="385"
+			android:layout_width="385dp"
 			android:layout_height="50dp"
 			android:src="@drawable/versSign"
 			android:id="@+id/imageView1"
