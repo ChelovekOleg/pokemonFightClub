@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
-	android:background="@drawable/searchBack"
+	android:background="@drawable/searchback"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
@@ -20,12 +20,10 @@
 			<ImageView
 				android:layout_width="210dp"
 				android:layout_height="210dp"
-				android:background=""
 				android:id="@+id/descriptPictrID"
 			/>
 
 			<TextView
-				android:background=""
 				android:textColor = "#ffffff"
 				android:id="@+id/descriptAbilitiesID"
 				android:layout_width="270dp"
@@ -41,7 +39,6 @@
 		
 			<TextView
 				android:textColor = "#ffffff"
-				android:background=""
 				android:id="@+id/descriptListID"
 				android:layout_width="fill_parent"
 				android:layout_height="fill_parent" 
