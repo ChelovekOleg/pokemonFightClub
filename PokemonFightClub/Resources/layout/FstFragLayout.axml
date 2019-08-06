@@ -13,5 +13,19 @@
 		android:id="@+id/imageView1" 
 	/>
 
+	<SearchView
+		
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@android:color/holo_blue_light"
+		android:id="@+id/barSearch" />
+
+	<ListView
+		
+		android:id="@+id/listView2"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+	</ListView>
 
 </LinearLayout>
