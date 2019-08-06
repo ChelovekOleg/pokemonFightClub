@@ -20,34 +20,31 @@
 			<ImageView
 				android:layout_width="210dp"
 				android:layout_height="210dp"
-				android:background=""
 				android:id="@+id/descriptPictrID"
 			/>
 
 			<TextView
-				android:background=""
+			
 				android:textColor = "#ffffff"
 				android:id="@+id/descriptAbilitiesID"
-				android:layout_width="270dp"
+				android:layout_width="175dp"
 				android:layout_height="210dp" 
 			/>
 	
-		</LinearLayout>	
-	
-		<LinearLayout
-			android:orientation="horizontal"
-			android:layout_width="fill_parent"
-			android:layout_height="fill_parent">
-		
-			<TextView
-				android:textColor = "#ffffff"
-				android:background=""
-				android:id="@+id/descriptListID"
-				android:layout_width="fill_parent"
-				android:layout_height="fill_parent" 
-			/>
-
 		</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:minWidth="25px"
+		android:minHeight="25px">
+		<TextView
+			android:textColor = "#ffffff"
+			android:id="@+id/descriptListID"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			/>
+	</LinearLayout>
 
 
 </LinearLayout>

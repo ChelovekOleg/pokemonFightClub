@@ -8,17 +8,20 @@
 	android:background="@drawable/background_image"
 	android:orientation="vertical"
 	android:gravity="center">
+
 	<ImageView
 		android:layout_height="130dp"
 		android:layout_width="wrap_content"
 		android:src="@drawable/pokeLogo"
 		android:id="@+id/imageView1" 
 	/>
+
 	<ImageView
 		android:layout_height="60dp"
 		android:layout_width="380dp"
 		android:src="@drawable/pokeLogoFight"
 	/>
+
 	<EditText
 		android:layout_height="50dp"
 		android:layout_width="300dp"
@@ -28,6 +31,7 @@
 		android:paddingLeft="15dp"
 		android:layout_marginTop="12dp"
 	/>
+
 	<EditText
 		android:layout_height="50dp"
 		android:layout_width="300dp"
@@ -37,6 +41,7 @@
 		android:layout_marginTop="12dp"
 		android:paddingLeft="15dp"
 	/>
+
 	<Button
 		android:layout_height="50dp"
 		android:layout_width="300dp"
