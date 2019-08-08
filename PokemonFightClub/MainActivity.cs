@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using System;
 using Android.Content;
+using Plugin.SecureStorage;
 
 namespace PokemonFightClub
 {
@@ -69,7 +70,8 @@ namespace PokemonFightClub
                 bool dbValidation = myDbInstance.checkUser(login.Text, password.Text);
                 if (dbValidation)
                 {
-                    Intent welcome = new Intent(this, typeof(PokeballPage));
+                    CrossSecureStorage.Current.SetValue("userIdAuth", ""+myDbInstance.getUserId(login.Text)+"");
+                    Intent welcome = new Intent(this, typeof(TabLib));//PokeballPage will be
                     welcome.PutExtra("username", login.Text);
                     welcome.PutExtra("password", password.Text);
 

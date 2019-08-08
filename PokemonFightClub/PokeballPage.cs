@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Plugin.SecureStorage;
 
 namespace PokemonFightClub
 {
@@ -26,9 +27,10 @@ namespace PokemonFightClub
             // Create your application here
             SetContentView(Resource.Layout.myPokeBall);
             myDbInstance = new DBHelper(this);
-            //myPokemonList.Add(myDbInstance.getMyPokeball());
-            myPokemonList.Add(new Pokemon(1,"Fafa", "fire", "1", "description for fafa", 1, "Attack 1", "Attack 2", "Attack 3", "Attack 4", 50,60,55,65,475,Resource.Drawable.pikachu));
-            myPokemonList.Add(new Pokemon(2, "Fafa", "fire", "1", "description for fafa", 1, "Attack 1", "Attack 2", "Attack 3", "Attack 4", 50, 60, 55, 65, 475, Resource.Drawable.pikachu));
+            //Change to id user
+            string userIdLog = CrossSecureStorage.Current.GetValue("userIdAuth");
+            myPokemonList = myDbInstance.GetLiblaryPokemons(1, userIdLog);
+
             myListView = FindViewById<ListView>(Resource.Id.listView1);
             myAdapter = new MyCustomAdapter(this, myPokemonList);
 
