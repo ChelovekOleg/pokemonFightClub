@@ -20,6 +20,7 @@ namespace PokemonFightClub
         MyCustomAdapter myAdapter;
         List<Pokemon> myPokemonList = new List<Pokemon>();
         DBHelper myDbInstance;
+        TextView noItem;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,7 +31,11 @@ namespace PokemonFightClub
             //Change to id user
             string userIdLog = CrossSecureStorage.Current.GetValue("userIdAuth");
             myPokemonList = myDbInstance.GetLiblaryPokemons(1, userIdLog);
-
+            if (myPokemonList.Count == 0) {
+                noItem = FindViewById<TextView>(Resource.Id.noItemsInList);
+                noItem.Text = "You have not got pokemons yet!";
+                noItem.SetHeight(100);
+            }
             myListView = FindViewById<ListView>(Resource.Id.listView1);
             myAdapter = new MyCustomAdapter(this, myPokemonList);
 

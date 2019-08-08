@@ -21,13 +21,17 @@
 				android:layout_width="210dp"
 				android:layout_height="210dp"
 				android:id="@+id/descriptPictrID"
+			
 			/>
 
 			<TextView
-			
+			android:background="@android:drawable/screen_background_dark_transparent"
 				android:textColor = "#ffffff"
 				android:id="@+id/descriptAbilitiesID"
 				android:layout_width="175dp"
+			android:text="asdasdasda"
+			android:gravity="center"
+			android:textSize="20dp"
 				android:layout_height="210dp" 
 			/>
 	
@@ -40,9 +44,14 @@
 		android:minHeight="25px">
 		<TextView
 			android:textColor = "#ffffff"
+			android:gravity="center"
 			android:id="@+id/descriptListID"
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent" 
+			android:text="asdasdasda"
+			android:textSize="25dp"
+			android:background="@android:drawable/screen_background_dark_transparent"
+			android:textStyle="bold"
 			/>
 	</LinearLayout>
 

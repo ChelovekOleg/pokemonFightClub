@@ -2691,10 +2691,10 @@ namespace PokemonFightClub
 			public const int homeAsUp = 2131230753;
 			
 			// aapt resource value: 0x7f0800a9
-			public const int hp1 = 2131230889;
+			public const int hpOne = 2131230889;
 			
 			// aapt resource value: 0x7f0800aa
-			public const int hp2 = 2131230890;
+			public const int hpTwo = 2131230890;
 			
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;

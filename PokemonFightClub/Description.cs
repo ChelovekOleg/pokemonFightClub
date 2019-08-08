@@ -32,6 +32,8 @@ namespace PokemonFightClub
             //clickedPok = (Pokemon)this.Intent.Extras.Get("pokemonClicked");
             clickedPok = JsonConvert.DeserializeObject<Pokemon>(Intent.GetStringExtra("pokemonClicked"));
             image.SetImageResource(clickedPok.image);
+            descriptionAbilities.Text = "Abilities" + System.Environment.NewLine + clickedPok.abilityOne + ": " + clickedPok.abilityOneAttack + " hp" + System.Environment.NewLine + "" + clickedPok.abilityTwo + ": " + clickedPok.abilityTwoAttack + " hp" + System.Environment.NewLine + clickedPok.abilityThree + ": " + clickedPok.abilityThreeAttack + System.Environment.NewLine + clickedPok.abilityFour + ": " + clickedPok.abilityFourAttack;
+            description.Text = clickedPok.description;
         }
     }
 }

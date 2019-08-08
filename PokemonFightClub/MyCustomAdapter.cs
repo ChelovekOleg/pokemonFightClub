@@ -64,7 +64,7 @@ namespace PokemonFightClub
                 myView = LayoutInflater.From(myContext).Inflate(Resource.Layout.listViewPokeBall, null);
 
                 myView.FindViewById<ImageView>(Resource.Id.myPokePicID).SetImageResource(pokemon.image);
-                myView.FindViewById<TextView>(Resource.Id.myPokeDescriptID).Text = pokemon.name + ": " + pokemon.description;
+                myView.FindViewById<TextView>(Resource.Id.myPokeDescriptID).Text = pokemon.name + System.Environment.NewLine + "Pokemon Type " + pokemon.type;
 
                 takeToFight = myView.FindViewById<Button>(Resource.Id.btnFight);
 

@@ -16,12 +16,17 @@
 		/>
 		
 		<TextView
+		android:background="@android:drawable/screen_background_dark_transparent"
 			android:textColor = "#ffffff"
 			android:id="@+id/myPokeDescriptID"
 			android:layout_width="140dp"
 			android:layout_height="140dp" 
 			android:layout_marginRight="10dp"
 			android:layout_marginLeft="10dp"
+		android:text="asd"
+		android:gravity="center"
+			android:textSize="25dp"
+			android:textStyle="bold"
 		/>
 		<Button
 			android:layout_height="70dp"

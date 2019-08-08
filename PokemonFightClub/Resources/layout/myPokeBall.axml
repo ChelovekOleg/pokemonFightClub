@@ -34,7 +34,11 @@
 
 	<TextView
 		android:layout_width="match_parent"
-		android:layout_height="100dp"
+		android:layout_height="10dp"
+		android:text="asd"
+		android:gravity="center"
+			android:textSize="25dp"
+			android:textStyle="bold"
 		android:id="@+id/noItemsInList"
 	/>
 			

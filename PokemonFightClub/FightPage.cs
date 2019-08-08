@@ -45,8 +45,8 @@ namespace PokemonFightClub
             btnAttack2 = FindViewById<Button>(Resource.Id.btnAttack2);
             btnAttack3 = FindViewById<Button>(Resource.Id.btnAttack3);
             btnAttack4 = FindViewById<Button>(Resource.Id.btnAttack4);
-            hpOne = FindViewById<TextView>(Resource.Id.hp1);
-            hpTwo = FindViewById<TextView>(Resource.Id.hp2);
+            hpOne = FindViewById<TextView>(Resource.Id.hpOne);
+            hpTwo = FindViewById<TextView>(Resource.Id.hpTwo);
             pokemonFight = JsonConvert.DeserializeObject<Pokemon>(Intent.GetStringExtra("pokemonFight"));
             myDbInstance = new DBHelper(this);
             myAlert = new Android.App.AlertDialog.Builder(this);
