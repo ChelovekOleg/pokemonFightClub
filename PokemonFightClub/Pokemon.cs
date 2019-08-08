@@ -53,14 +53,14 @@ namespace PokemonFightClub
         }
 
         // 4. METHODS
-        public void sayPokemonName()
+       
+        public int checkHealthPoints()
         {
-            Console.WriteLine("My name is: " + this.name);
+            return this.hp;
         }
 
-        public void checkHealthPoints()
-        {
-            Console.WriteLine("HP is: " + this.hp);
+        public void attack(int damage) {
+            this.hp -= damage;
         }
     }
 }

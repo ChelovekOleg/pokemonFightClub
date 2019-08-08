@@ -55,13 +55,14 @@ namespace PokemonFightClub
         void myButtonClick(object sender, System.EventArgs e)
         {
 
-            Dialog myDialog = myAlert.Create();
+            
             if (login.Text == "" || password.Text == "" || login.Equals("") || password.Equals(""))
             {
                 myAlert.SetTitle("Validation Error");
                 myAlert.SetMessage("Please Enter Your User Name or Password");
                 myAlert.SetPositiveButton("OK", OkAction);
                 myAlert.SetNegativeButton("Cancel", CancelAction);
+                Dialog myDialog = myAlert.Create();
                 myDialog.Show();
             }
             else
@@ -82,6 +83,7 @@ namespace PokemonFightClub
                     myAlert.SetTitle("User or Password is incorrect");
                     myAlert.SetMessage("Try again!");
                     myAlert.SetPositiveButton("OK", OkAction);
+                    Dialog myDialog = myAlert.Create();
                     myDialog.Show();
 
                 }

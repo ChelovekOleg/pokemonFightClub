@@ -58,6 +58,13 @@ namespace PokemonFightClub
 
         }
 
+        private void OkActionDone(object sender, DialogClickEventArgs e)
+        {
+            Intent login = new Intent(this, typeof(MainActivity));
+            StartActivity(login);
+
+        }
+
         private void CancelAction(object sender, DialogClickEventArgs e)
         {
             System.Console.WriteLine("Cancel button have been clicked!");
@@ -72,21 +79,23 @@ namespace PokemonFightClub
 
             bool validation = (firstName.Text == "" || email.Text == "" || password.Text == "" || firstName.Equals("") || email.Equals("") || password.Equals("")) ? true : false;
 
-            Dialog myDialog = myAlert.Create();
+            
             if (validation)
             {
                 myAlert.SetNegativeButton("Cancel", CancelAction);
+                Dialog myDialog = myAlert.Create();
                 myDialog.Show();
             }
             else
             {
                 myDbInstance.insertNewUser(random.Next() ,firstName.Text, email.Text, username.Text, password.Text);
                 myAlert.SetTitle("You have created new account successfully!!");
-                myAlert.SetMessage("Please Fill All Fields!");
-                myAlert.SetPositiveButton("OK", OkAction);
-                Intent login = new Intent(this, typeof(MainActivity));
+                myAlert.SetMessage("Proceed to login page");
+                myAlert.SetPositiveButton("OK", OkActionDone);
+                
+                Dialog myDialog = myAlert.Create();
                 myDialog.Show();
-                StartActivity(login);
+                
             }
         }
     }

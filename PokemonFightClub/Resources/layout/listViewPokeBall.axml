@@ -32,5 +32,6 @@
 			android:textAllCaps="false"
 			android:textSize="20dp"
 			android:background="@drawable/btnSign"
+		android:focusable="false"
 		/>
 	</LinearLayout>	

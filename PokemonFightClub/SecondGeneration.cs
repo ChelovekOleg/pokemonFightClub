@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Plugin.SecureStorage;
+using Newtonsoft.Json;
 
 namespace PokemonFightClub
 {
@@ -20,6 +22,7 @@ namespace PokemonFightClub
         SearchView barFilter;
         Context context;
         DBHelper myDbInstance;
+        Button toPokeball;
         List<Pokemon> myPokemonList = new List<Pokemon>();
         List<Pokemon> myPokemonListFillter = new List<Pokemon>();
 
@@ -46,7 +49,11 @@ namespace PokemonFightClub
             myPokemonListFillter = myDbInstance.GetLiblaryPokemons(2, "0");
             myAdapter = new CustomAdapterLib(this.context, myPokemonList);
             myListView.Adapter = myAdapter;
+            myListView.ChoiceMode = ChoiceMode.Single;
+
             barFilter.QueryTextChange += barSearch_QueryTextChange;
+
+            this.myListView.ItemClick += myListView_ItemClick;
 
             return myView;
         }
@@ -63,12 +70,25 @@ namespace PokemonFightClub
                     Console.WriteLine(item.name);
                     myPokemonList.Add(item);
                 }
+                else if (e.NewText == "") {
+                    myPokemonList.Add(item);
+                }
 
             }
             myAdapter = new CustomAdapterLib(this.context, myPokemonList);
             myListView.Adapter = myAdapter;
             myAdapter.NotifyDataSetChanged();
 
+        }
+
+        void myListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e) {
+            System.Console.WriteLine("Pokemon id was clicked:");
+            System.Console.WriteLine(myPokemonList[e.Position].id);
+            Intent descriptionPage = new Intent(context, typeof(Description));//PokeballPage will be
+            //descriptionPage.PutExtra("pokemonClicked", myPokemonList[e.Position]);
+            descriptionPage.PutExtra("pokemonClicked", JsonConvert.SerializeObject(myPokemonList[e.Position]));
+            StartActivity(descriptionPage);
+           // myDbInstance.addToPokeball(int.Parse(CrossSecureStorage.Current.GetValue("userIdAuth")), myPokemonList[e.Position].id);
         }
 
         public override void OnResume()

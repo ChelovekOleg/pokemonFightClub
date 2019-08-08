@@ -138,7 +138,7 @@
 		<TextView
 			android:textColor = "#ffffff"
 			android:background="@color/material_blue_grey_800"
-			android:id="@+id/versDescript1"
+			android:id="@+id/hp1"
 			android:layout_width="120dp"
 			android:layout_height="60dp"
 			android:layout_marginTop="35dp"
@@ -148,7 +148,7 @@
 		<TextView
 			android:textColor = "#ffffff"
 			android:background="@color/material_blue_grey_800"
-			android:id="@+id/versDescript2"
+			android:id="@+id/hp2"
 			android:layout_width="120dp"
 			android:layout_height="60dp"
 			android:layout_marginTop="35dp"
