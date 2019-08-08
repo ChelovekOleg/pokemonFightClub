@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace PokemonFightClub
 {
-    class Pokemon
+    public class Pokemon
     {
         public int id = 0;
         public string name = "";
